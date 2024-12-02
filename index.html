@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Депозитный калькулятор и выбор элементов</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Депозитный калькулятор -->
+    <section class="calculator">
+      <h1>Депозитный калькулятор</h1>
+      <label
+        >Первоначальный депозит:
+        <input id="deposit" type="number" value="100000" /></label
+      ><br /><br />
+      <label
+        >Срок вклада?
+        <select id="term">
+          <option value="3">3 (минимум)</option>
+          <option value="6">6</option>
+          <option value="12">12</option>
+        </select> </label
+      ><br /><br />
+      <label
+        >Годовая процентная ставка:
+        <input id="rate" type="number" value="18" /></label
+      ><br /><br />
+      <h2>Было: <span id="was">100000</span></h2>
+      <h2>Станет: <span id="will">104225</span></h2>
+      <div class="bars">
+        <div class="bar bar-old">
+          <div class="bar-label">100000</div>
+        </div>
+        <div class="bar bar-new">
+          <div class="bar-label">104225</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Выбор элементов -->
+    <section class="element-selector">
+      <h1>Выберите элементы</h1>
+      <h2>Элементов выбрано: <span id="selected-count">0</span></h2>
+      <h2>Сумма выбранных элементов: <span id="selected-sum">0</span></h2>
+      <div class="container" id="grid">
+        <!-- Блоки генерируются через JavaScript -->
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
